@@ -1,0 +1,103 @@
+[user]
+  email = duncan.lock@gmail.com
+  name = Duncan Lock
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[alias]
+  st = status -sb
+  ci = commit
+  co = checkout
+  # Better branch output
+  br = branch -avv --sort=-committerdate
+  # Better branch & tag output
+  brt = !"echo 'Branches:' && echo '----------------------' && git branch -avv && echo 'Tags:' && echo '----------------------' && git tag --list -n"
+
+  mt = mergetool
+
+  # Delete a branch locally
+  delete-branch = !"git branch -D \"$1\""
+  # Create a new local tracking branch & switch to it
+  new-branch = !"git checkout --track -b \"$1\""
+
+  fetch = !git fetch --all --prune --progress
+
+  last = log -1 HEAD
+  ignored = ls-files --others -i --exclude-standard
+  standup = "!git log --since yesterday --author $(git config user.email) --pretty=short"
+  #
+  # More human git aliases for common stuff, from http://gggritso.com/human-git-aliases
+  #
+  branches = branch -a -v -v
+  tags = tag
+  stashes = stash list
+  remotes = remote -v
+
+  unstage = reset HEAD --
+  unmerge = reset --merge
+  discard = checkout --
+  uncommit = reset --mixed HEAD~
+  amend = commit --amend
+  nevermind = !git reset --hard HEAD && git clean -d -f
+  # Force your local branch to be the same as the upstream/origin/remote version
+  hardpullover = !git reset --hard origin/HEAD && git clean -d -f && git pull
+
+  head-branch = !"git remote show origin | grep 'HEAD branch' | cut -d' ' -f5"
+  up = !"git switch $(git head-branch) && git fetch --all --prune --progress && git pull"
+
+  unmerged = diff --name-only --diff-filter=U
+  graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+
+  restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
+[push]
+  default = simple
+[diff]
+  tool = meld
+  colorMoved = default
+[merge]
+  tool = mymeld
+  conflictstyle = diff3
+
+[mergetool "mymeld"]
+  # Gives you meld, with three comparison tabs. Assuming you're merging others changes into
+  # your branch, this shows you:
+  # - 1st tab: yours|merged result|theirs (do the merge here into the middle pane)
+  # - 2nd tab: base vs your changes (look at just your changes)
+  # - 3rd tab: base vs their changes (look at just their changes)
+  cmd = meld $LOCAL $BASE $REMOTE --output $MERGED --diff $BASE $LOCAL --diff $BASE $REMOTE --auto-merge
+[backup]
+  prefix-time = True
+  prefix-date = True
+  directory = /home/duncan/Dropbox/git-backups/
+[core]
+  editor = micro
+  pager = delta
+[pull]
+  rebase = false
+
+[include]
+  path = /home/duncan/dev/delta/themes.gitconfig
+
+[delta]
+  features = zenburn navigate
+#  plus-color = "#012800"
+#  minus-color = "#340001"
+#  theme = 'Monokai Extended Bright'
+  line-numbers = true
+  side-by-side = false
+
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+[credential "https://github.com"]
+  helper = !gh auth git-credential
+[init]
+  defaultBranch = main
+[help]
+  autoCorrect = prompt
