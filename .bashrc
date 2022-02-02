@@ -33,7 +33,7 @@ source ~/bash/bash_completions.bash
 
 source ~/bash/plan9_env.bash
 
-source ~/.git-prompt.sh
+source ~/bash/git-prompt.sh
 
 source ~/bash/docker.bash
 
