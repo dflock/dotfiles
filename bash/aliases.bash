@@ -42,6 +42,7 @@ alias top15='cut -d " " -f 1 ~/.bash_history | sort | uniq -c | sort -n |  sed "
 alias myip='curl http://ipecho.net/plain; echo'
 # List all the ports that are currently open, with the processes that are listening
 alias ports="sudo netstat -tulpn | grep '^tcp' | awk '{print \$1,\$4,\$7}' | sort -n | uniq | column -t"
+alias port-list="ports | awk '{print $2}' | rev | cut -d: -f1 | rev | sort --numeric --unique"
 
 # Enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
