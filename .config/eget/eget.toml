@@ -1,0 +1,4 @@
+[global]
+target = "~/bin"
+upgrade_only = true
+github_token = "ghp_..."
