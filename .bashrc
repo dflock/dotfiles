@@ -41,8 +41,6 @@ source ~/bash/docker.bash
 
 source ~/bash/todo.bash
 
-source ~/bash/homebrew.bash
-
 # Sorta dead: https://github.com/gnunn1/tilix/issues/1700
 #source ~/bash/tilix.bash
 
