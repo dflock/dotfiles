@@ -6,8 +6,7 @@
 
 # Run 'yarn global add' without sudo, set yarn global bin somewhere else
 # https://github.com/yarnpkg/yarn/issues/1040
-export PREFIX=~/.config/yarn/global
-pathadd "$PREFIX/bin" 'before'
+pathadd "~/.config/yarn/global/bin" 'before'
 
 #
 # NPM stuff
