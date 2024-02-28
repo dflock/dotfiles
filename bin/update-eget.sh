@@ -2,6 +2,8 @@
 
 cd ~/bin || exit
 
+# Token is in ~/.config/eget/eget.toml
+
 echo -e "\nUpdating eget..."
 eget zyedidia/eget
 
@@ -11,12 +13,10 @@ echo -e "\nUpdating pandoc..."
 eget jgm/pandoc
 echo -e "\nUpdating fzf..."
 eget junegunn/fzf
-echo -e "\nUpdating exa..."
-eget ogham/exa --asset ^musl
+echo -e "\nUpdating eza..."
+eget eza-community/eza --asset musl.tar.gz
 echo -e "\nUpdating starship..."
 eget starship/starship --asset ^musl
-echo -e "\nUpdating rg..."
-eget BurntSushi/ripgrep
 echo -e "\nUpdating bat..."
 eget sharkdp/bat --asset ^musl
 echo -e "\nUpdating btop..."
@@ -37,9 +37,17 @@ echo -e "\nUpdating broot..."
 eget Canop/broot --file=x86_64-linux/broot
 echo -e "\nUpdating fd..."
 eget sharkdp/fd --asset x86_64-unknown-linux-musl.tar.gz
+echo -e "\nUpdating pdfcpu..."
+eget pdfcpu/pdfcpu
+echo -e "\nUpdating sd..."
+eget chmln/sd --asset ^gnu
 
+echo -e "\nThese ones always update, regardless...\n"
+
+echo -e "\nUpdating tlrc..."
+eget tldr-pages/tlrc --asset=linux-gnu.tar.gz --file=tldr
 echo -e "\nUpdating cascadia-code font..."
 eget microsoft/cascadia-code --file=ttf/*.ttf --all --to ~/.fonts
-
-echo -e "\nUpdating rclone..."
-sudo /home/duncan/bin/eget rclone/rclone --asset amd64.zip --to /usr/bin
+echo -e "\nUpdating rg..."
+eget BurntSushi/ripgrep
+echo -e "\nUpdating rclone..."sudo /home/duncan/bin/eget rclone/rclone --asset amd64.zip --to /usr/bin
