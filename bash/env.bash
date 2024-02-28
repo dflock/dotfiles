@@ -82,6 +82,7 @@ export notes="$NOTES_DIR"
 export EXA_ICON_SPACING=2
 
 export QT_QPA_PLATFORMTHEME="qt5ct"
+export GTK_THEME=Adwaita:dark
 
 # Bash prompt for set -x/xtrace output
 # export PS4='$0.$LINENO+ '
