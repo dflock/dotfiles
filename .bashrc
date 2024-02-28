@@ -23,8 +23,9 @@ esac
 #
 source ~/bash/functions.bash
 source ~/bash/env.bash
-source ~/bash/sbp_env.bash
-#source ~/bash/starship_env.bash
+#source ~/bash/sbp_env.bash
+source ~/bash/github_env.bash
+source ~/bash/starship_env.bash
 
 source ~/bash/kitty.bash
 
@@ -58,3 +59,6 @@ source ~/bash/sigil_env.bash
 # Took out because too slow at startup
 # https://github.com/cantino/mcfly/issues/131
 #source ~/bash/mcfly.bash
+
+# Took out because not really using
+#source ~/.config/broot/launcher/bash/br
