@@ -53,6 +53,8 @@ source ~/bash/golang_env.bash
 source ~/bash/rust_env.bash
 source ~/bash/nim_env.bash
 
+source ~/bash/sigil_env.bash
+
 # Took out because too slow at startup
 # https://github.com/cantino/mcfly/issues/131
 #source ~/bash/mcfly.bash
