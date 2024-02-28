@@ -20,18 +20,18 @@ alias today='date +"%A, %B %-d, %Y"'
 # File listing aliases
 #
 # Use exa instead of ls
-alias ls='exa --classify'
+alias ls='eza --classify'
 # Everything, in long format
 llopts='--long --header --group --git --all --all --group-directories-first --classify --color-scale --icons'
-alias ll='exa $llopts'
+alias ll='eza $llopts'
 # Everything, in long format, newset 10 files only.
-alias llt='exa $llopts --sort newest | tail'
+alias llt='eza $llopts --sort newest | tail'
 # Everything, in long format, plus octal permissions
-alias llo='exa $llopts --octal-permissions'
+alias llo='eza $llopts --octal-permissions'
 # Everything, is a hierarchical tree view, like the `tree` command
-alias tree='exa --long --header --group --git --all --classify --color-scale --icons --tree'
+alias tree='eza --long --header --group --git --all --classify --color-scale --icons --tree'
 # Only show directories
-alias lsd='exa $llopts --only-dirs'
+alias lsd='eza $llopts --only-dirs'
 
 # Show most common files in dir
 alias dirstat='find . -type f -not -path ".git/*" | sed "s/.*\.\(.*\)/\1/p" | grep -v "/" | sort | uniq -c | sort'
@@ -75,6 +75,7 @@ alias mv='mv -i'
 alias rm='rm -I'
 
 alias man="manpage-wrapper"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 alias grep='grep -i --color=auto'
 alias fgrep='fgrep --color=auto'
