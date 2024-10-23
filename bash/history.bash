@@ -16,4 +16,4 @@ export HISTFILE=~/.bash_eternal_history
 # -a append current session history to history file
 # -c clear current session history
 # -r read history file and append contents to current session history
-[[ "$PROMPT_COMMAND" == *'history -a; history -c; history -r'* ]] || export PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
+[[ "$PROMPT_COMMAND" == *'history -a'* ]] || export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"

@@ -23,6 +23,7 @@ esac
 #
 source ~/bash/functions.bash
 source ~/bash/env.bash
+source ~/bash/xdg.bash
 #source ~/bash/sbp_env.bash
 source ~/bash/github_env.bash
 source ~/bash/starship_env.bash
@@ -53,6 +54,7 @@ source ~/bash/ruby_env.bash
 source ~/bash/golang_env.bash
 source ~/bash/rust_env.bash
 source ~/bash/nim_env.bash
+source ~/bash/haskel_env.bash
 
 source ~/bash/sigil_env.bash
 
@@ -62,3 +64,4 @@ source ~/bash/sigil_env.bash
 
 # Took out because not really using
 #source ~/.config/broot/launcher/bash/br
+

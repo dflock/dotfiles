@@ -30,3 +30,16 @@ echo "Updating apps using eget..."
 
 echo "Updating man/tldr pages..."
 tldr --update
+
+echo "Updating Servo nightly..."
+cd /tmp \
+  && rm -f /tmp/servo-latest.tar.gz \
+  && wget -q --show-progress https://download.servo.org/nightly/linux/servo-latest.tar.gz \
+  && tar zxf servo-latest.tar.gz \
+  && rm -rf ~/bin/servo \
+  && mv /tmp/servo ~/bin/servo
+
+echo "Updating kitty..."
+curl --silent --output -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n
+
+echo "Done."

@@ -17,6 +17,10 @@ pathadd "$NPM_PACKAGES/bin" 'before'
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
+# pnpm stuff
+export PNPM_HOME="$HOME/.local/share/pnpm"
+pathadd "$PNPM_HOME" 'before'
+
 # Preferentially run stuff from the current/local node_modules folder.
 # This should come after and yarn/npm global path adds
 pathadd './node_modules/.bin' 'before'

@@ -80,6 +80,7 @@ export NOTES_DIR="$HOME/notes"
 export notes="$NOTES_DIR"
 
 export EXA_ICON_SPACING=2
+export EZA_MIN_LUMINANCE=60
 
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME=Adwaita:dark
