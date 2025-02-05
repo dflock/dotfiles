@@ -102,24 +102,3 @@ alias ping="prettyping"
 alias gst='git status'
 alias gcm='git checkout master'
 alias gcd='git checkout dev'
-
-alias gd='git diff | mate'
-alias gau='git add --update'
-
-alias gc='git commit -v'
-alias gca='git commit -v -a'
-
-alias gb='git branch'
-alias gba='git branch -a'
-
-alias gco='git checkout'
-alias gcob='git checkout -b'
-alias gcot='git checkout -t'
-alias gcotb='git checkout --track -b'
-
-alias glp='git log -p'
-alias glog='git log'
-alias glogp='git log --pretty=format:"%h %s" --graph'
-
-
-alias tf='terraform'

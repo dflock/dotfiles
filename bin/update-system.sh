@@ -13,6 +13,10 @@ set -o pipefail  # If a pipeline step fails, the pipelines RC is the RC of the f
 #
 
 # dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+# Cleanup self-reinstalling apt list files, that I've manually replaced
+# with .sources files.
+sudo rm -f /etc/apt/sources.list.d/spotify.list
+sudo rm -f /etc/apt/sources.list.d/mediaarea.list
 
 echo "Updating apt database..."
 sudo apt update -qq
@@ -36,8 +40,8 @@ cd /tmp \
   && rm -f /tmp/servo-latest.tar.gz \
   && wget -q --show-progress https://download.servo.org/nightly/linux/servo-latest.tar.gz \
   && tar zxf servo-latest.tar.gz \
-  && rm -rf ~/bin/servo \
-  && mv /tmp/servo ~/bin/servo
+  && rm -rf ~/bin/servo-browser \
+  && mv /tmp/servo ~/bin/servo-browser
 
 echo "Updating kitty..."
 curl --silent --output -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n
