@@ -20,8 +20,7 @@ complete -o default -F _pip_completion pip
 # pip bash completion end
 
 source ~/.git-completion.bash
-source ~/.wp-completion.bash
 
 # Completions for terraform, and the tf alias
-complete -C /usr/bin/terraform terraform
-complete -C /usr/bin/terraform tf
+#complete -C /usr/bin/terraform terraform
+#complete -C /usr/bin/terraform tf

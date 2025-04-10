@@ -8,7 +8,7 @@ echo "• Updating eget..."
 eget --quiet zyedidia/eget
 
 echo "• Updating micro..."
-eget --quiet zyedidia/micro --asset static.tgz
+eget --quiet zyedidia/micro --asset static.tgz --asset ^tgz.sha
 echo "• Updating pandoc..."
 eget --quiet jgm/pandoc
 echo "• Updating fzf..."
@@ -40,21 +40,32 @@ eget --quiet pdfcpu/pdfcpu
 echo "• Updating sd..."
 eget --quiet chmln/sd --asset ^gnu
 echo "• Updating dog..."
-eget --quiet ogham/dog --asset linux-gnu.zip
+eget --quiet ogham/dog --asset linux-gnu.zip --asset ^.zip.minisig
 echo "• Updating doggo..."
 eget --quiet mr-karan/doggo --asset Linux_x86_64.tar.gz
 echo "• Updating koreader..."
 eget --quiet koreader/koreader --asset .AppImage
 echo "• Updating procs..."
 eget --quiet dalance/procs
-echo "• Updating ghostty..."
-eget mkasberg/ghostty-ubuntu  --asset amd64_22.04.deb --to /tmp/ghostty.deb && sudo apt install /tmp/ghostty.deb
+echo "• Updating lnav..."
+eget --quiet tstack/lnav
 echo "• Updating rg..."
-eget BurntSushi/ripgrep --to="~/bin/rg"
+eget --quiet BurntSushi/ripgrep --to="~/bin/rg"
 echo "• Updating tlrc..."
-eget tldr-pages/tlrc --asset=linux-gnu.tar.gz --file=tldr --to="~/bin/tldr"
-echo "• Updating tidal-hifi..."
-eget Mastermindzh/tidal-hifi  --asset .deb --to /tmp/tidal.deb && sudo apt install /tmp/tidal.deb
+eget --quiet tldr-pages/tlrc --asset=linux-gnu.tar.gz --file=tldr --to="~/bin/tldr"
+
+echo
+echo "These ones use debs..."
+
+echo "• Updating ghostty..."
+eget mkasberg/ghostty-ubuntu --to /tmp/ghostty.deb && sudo apt install -qq /tmp/ghostty.deb
+# echo "• Updating foliate..."
+# eget johnfactotum/foliate --asset .deb --to /tmp/foliate.deb && sudo apt install -qq /tmp/foliate.deb
+echo "Updating readset..."
+eget readest/readest --asset amd64.deb --to /tmp/readset.deb && sudo apt install -qq /tmp/readset.deb
+echo "• Updating obsidian..."
+eget obsidianmd/obsidian-releases --asset amd64.deb --to /tmp/obsidianmd.deb && sudo apt install -qq /tmp/obsidianmd.deb
+
 
 echo
 echo "These ones always update, regardless..."

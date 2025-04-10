@@ -15,8 +15,8 @@ set -o pipefail  # If a pipeline step fails, the pipelines RC is the RC of the f
 # dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 # Cleanup self-reinstalling apt list files, that I've manually replaced
 # with .sources files.
-sudo rm -f /etc/apt/sources.list.d/spotify.list
-sudo rm -f /etc/apt/sources.list.d/mediaarea.list
+#sudo rm -f /etc/apt/sources.list.d/spotify.list
+#sudo rm -f /etc/apt/sources.list.d/mediaarea.list
 
 echo "Updating apt database..."
 sudo apt update -qq
