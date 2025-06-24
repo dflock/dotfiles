@@ -8,7 +8,7 @@ echo "• Updating eget..."
 eget --quiet zyedidia/eget
 
 echo "• Updating miniflux..."
-eget --quiet miniflux/v2 --to="~/bin/miniflux"
+eget --quiet miniflux/v2 --to ~/bin/miniflux
 echo "• Updating delta..."
 eget dandavison/delta --asset musl.tar.gz
 echo "• Updating micro..."
