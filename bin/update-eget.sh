@@ -7,6 +7,10 @@ cd ~/bin || exit
 echo "• Updating eget..."
 eget --quiet zyedidia/eget
 
+echo "• Updating miniflux..."
+eget --quiet miniflux/v2 --to="~/bin/miniflux"
+echo "• Updating delta..."
+eget dandavison/delta --asset musl.tar.gz
 echo "• Updating micro..."
 eget --quiet zyedidia/micro --asset static.tgz --asset ^tgz.sha
 echo "• Updating pandoc..."
@@ -58,7 +62,7 @@ echo
 echo "These ones use debs..."
 
 echo "• Updating ghostty..."
-eget mkasberg/ghostty-ubuntu --to /tmp/ghostty.deb && sudo apt install -qq /tmp/ghostty.deb
+eget mkasberg/ghostty-ubuntu --asset=24.04.deb  --to /tmp/ghostty.deb && sudo apt install -qq /tmp/ghostty.deb
 # echo "• Updating foliate..."
 # eget johnfactotum/foliate --asset .deb --to /tmp/foliate.deb && sudo apt install -qq /tmp/foliate.deb
 echo "Updating readset..."

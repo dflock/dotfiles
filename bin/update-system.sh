@@ -44,6 +44,17 @@ cd /tmp \
   && mv /tmp/servo ~/bin/servo-browser
 
 echo "Updating kitty..."
-curl --silent --output -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n
+
+echo "Update LanguageTool Server..."
+cd ~/bin \
+  && rm -rf ./LanguageTool-latest-snapshot-old \
+  && mv ./LanguageTool-latest-snapshot ./LanguageTool-latest-snapshot-old \
+  && mkdir ./LanguageTool-latest-snapshot
+cd /tmp \
+  && rm -f ./LanguageTool-latest-snapshot.zip \
+  && wget -q --show-progress https://internal1.languagetool.org/snapshots/LanguageTool-latest-snapshot.zip \
+  && cd ~/bin/LanguageTool-latest-snapshot \
+  && bsdtar --strip-components=1 -zxf /tmp/LanguageTool-latest-snapshot.zip
 
 echo "Done."
