@@ -7,12 +7,12 @@ cd ~/bin || exit
 echo "• Updating eget..."
 eget --quiet zyedidia/eget
 
-echo "• Updating miniflux..."
-eget --quiet miniflux/v2 --to ~/bin/miniflux
-echo "• Updating delta..."
+#echo "• Updating miniflux..."
+#eget --quiet miniflux/v2 --to ~/bin/miniflux
+echo -n "• Updating delta..."
 eget dandavison/delta --asset musl.tar.gz
-echo "• Updating micro..."
-eget --quiet zyedidia/micro --asset static.tgz --asset ^tgz.sha
+echo -n "• Updating micro..."
+eget zyedidia/micro --asset static.tgz --asset ^tgz.sha
 echo "• Updating pandoc..."
 eget --quiet jgm/pandoc
 echo "• Updating fzf..."
@@ -35,8 +35,6 @@ echo "• Updating lapce..."
 eget --quiet lapce/lapce --asset lapce-linux-amd64.tar.gz
 echo "• Updating pdftilecut..."
 eget --quiet oxplot/pdftilecut
-echo "• Updating tealdeer..."
-eget --quiet dbrgn/tealdeer
 echo "• Updating fd..."
 eget --quiet sharkdp/fd --asset x86_64-unknown-linux-musl.tar.gz
 echo "• Updating pdfcpu..."
