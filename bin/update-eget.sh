@@ -4,57 +4,61 @@ cd ~/bin || exit
 
 # Token is in ~/.config/eget/eget.toml
 
-echo "• Updating eget..."
-eget --quiet zyedidia/eget
+echo -n "• Updating eget..."
+eget zyedidia/eget
 
-#echo "• Updating miniflux..."
-#eget --quiet miniflux/v2 --to ~/bin/miniflux
-echo -n "• Updating delta..."
+echo -n "• Updating watchexec...   "
+eget watchexec/watchexec --asset linux-gnu.tar.xz --asset ^xz.b3 --asset ^xz.sha512
+echo -n "• Updating just...        "
+eget casey/just
+echo -n "• Updating miniflux...    "
+eget miniflux/v2 --to="~/bin/miniflux"
+echo -n "• Updating delta...       "
 eget dandavison/delta --asset musl.tar.gz
-echo -n "• Updating micro..."
+echo -n "• Updating micro...       "
 eget zyedidia/micro --asset static.tgz --asset ^tgz.sha
-echo "• Updating pandoc..."
-eget --quiet jgm/pandoc
-echo "• Updating fzf..."
-eget --quiet junegunn/fzf
-echo "• Updating eza..."
-eget --quiet eza-community/eza --asset musl.tar.gz
-echo "• Updating starship..."
-eget --quiet starship/starship --asset ^musl
-echo "• Updating bat..."
-eget --quiet sharkdp/bat --asset ^musl
-echo "• Updating btop..."
-eget --quiet aristocratos/btop
-echo "• Updating duf..."
-eget --quiet muesli/duf --asset x86_64.tar.gz
-echo "• Updating caddy..."
-eget --quiet caddyserver/caddy --asset amd64.tar.gz --asset ^.sig
-echo "• Updating vale..."
-eget --quiet errata-ai/vale --asset 64-bit.tar
-echo "• Updating lapce..."
-eget --quiet lapce/lapce --asset lapce-linux-amd64.tar.gz
-echo "• Updating pdftilecut..."
-eget --quiet oxplot/pdftilecut
-echo "• Updating fd..."
-eget --quiet sharkdp/fd --asset x86_64-unknown-linux-musl.tar.gz
-echo "• Updating pdfcpu..."
-eget --quiet pdfcpu/pdfcpu
-echo "• Updating sd..."
-eget --quiet chmln/sd --asset ^gnu
-echo "• Updating dog..."
-eget --quiet ogham/dog --asset linux-gnu.zip --asset ^.zip.minisig
-echo "• Updating doggo..."
-eget --quiet mr-karan/doggo --asset Linux_x86_64.tar.gz
-echo "• Updating koreader..."
-eget --quiet koreader/koreader --asset .AppImage
-echo "• Updating procs..."
-eget --quiet dalance/procs
-echo "• Updating lnav..."
-eget --quiet tstack/lnav
-echo "• Updating rg..."
-eget --quiet BurntSushi/ripgrep --to="~/bin/rg"
-echo "• Updating tlrc..."
-eget --quiet tldr-pages/tlrc --asset=linux-gnu.tar.gz --file=tldr --to="~/bin/tldr"
+echo -n "• Updating pandoc...      "
+eget jgm/pandoc
+echo -n "• Updating fzf...         "
+eget junegunn/fzf
+echo -n "• Updating eza...         "
+eget eza-community/eza --asset musl.tar.gz
+echo -n "• Updating starship...    "
+eget starship/starship --asset ^musl
+echo -n "• Updating bat...         "
+eget sharkdp/bat --asset ^musl
+echo -n "• Updating btop...        "
+eget aristocratos/btop
+echo -n "• Updating duf...         "
+eget muesli/duf --asset x86_64.tar.gz
+echo -n "• Updating caddy...       "
+eget caddyserver/caddy --asset amd64.tar.gz --asset ^.sig
+echo -n "• Updating vale...        "
+eget errata-ai/vale --asset 64-bit.tar
+echo -n "• Updating lapce...       "
+eget lapce/lapce --asset lapce-linux-amd64.tar.gz
+echo -n "• Updating pdftilecut...  "
+eget oxplot/pdftilecut
+echo -n "• Updating fd...          "
+eget sharkdp/fd --asset x86_64-unknown-linux-musl.tar.gz
+echo -n "• Updating pdfcpu...      "
+eget pdfcpu/pdfcpu
+echo -n "• Updating sd...          "
+eget chmln/sd --asset ^gnu
+echo -n "• Updating dog...         "
+eget ogham/dog --asset linux-gnu.zip --asset ^.zip.minisig
+echo -n "• Updating doggo...       "
+eget mr-karan/doggo --asset Linux_x86_64.tar.gz
+echo -n "• Updating koreader...    "
+eget koreader/koreader --asset .AppImage
+echo -n "• Updating procs...       "
+eget dalance/procs
+echo -n "• Updating lnav...        "
+eget tstack/lnav
+echo -n "• Updating rg...          "
+eget BurntSushi/ripgrep --to="~/bin/rg"
+echo -n "• Updating tlrc...        "
+eget tldr-pages/tlrc --asset=linux-gnu.tar.gz --file=tldr --to="~/bin/tldr"
 
 echo
 echo "These ones use debs..."
@@ -78,4 +82,3 @@ echo "• Updating cascadia-code font..."
 eget microsoft/cascadia-code --file=ttf/*.ttf --all --to ~/.fonts
 echo "• Updating rclone..."
 sudo /home/duncan/bin/eget rclone/rclone --asset amd64.zip --to /usr/bin/rclone
-

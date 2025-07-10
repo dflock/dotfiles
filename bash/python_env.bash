@@ -11,3 +11,6 @@ fi
 
 pathadd "$HOME/.poetry/bin" 'before'
 pathadd "$HOME/.local/bin" 'before'
+
+# Add uv scripts/tools to the path
+. "$HOME/.local/share/../bin/env"
