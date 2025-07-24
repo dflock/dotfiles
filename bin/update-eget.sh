@@ -4,7 +4,7 @@ cd ~/bin || exit
 
 # Token is in ~/.config/eget/eget.toml
 
-echo -n "• Updating eget..."
+echo -n "• Updating eget...        "
 eget zyedidia/eget
 
 echo -n "• Updating watchexec...   "
@@ -63,8 +63,8 @@ eget tldr-pages/tlrc --asset=linux-gnu.tar.gz --file=tldr --to="~/bin/tldr"
 echo
 echo "These ones use debs..."
 
-echo "• Updating ghostty..."
-eget mkasberg/ghostty-ubuntu --asset=24.04.deb  --to /tmp/ghostty.deb && sudo apt install -qq /tmp/ghostty.deb
+#echo "• Updating ghostty..."
+#eget mkasberg/ghostty-ubuntu --asset=24.04.deb  --to /tmp/ghostty.deb && sudo apt install -qq /tmp/ghostty.deb
 # echo "• Updating foliate..."
 # eget johnfactotum/foliate --asset .deb --to /tmp/foliate.deb && sudo apt install -qq /tmp/foliate.deb
 echo "Updating readset..."
