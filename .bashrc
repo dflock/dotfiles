@@ -65,3 +65,5 @@ source ~/bash/sigil_env.bash
 
 #source ~/bash/sbp_env.bash
 source ~/bash/starship_env.bash
+
+. "$HOME/.local/share/../bin/env"

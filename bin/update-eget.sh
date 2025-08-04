@@ -59,6 +59,9 @@ echo -n "• Updating rg...          "
 eget BurntSushi/ripgrep --to="~/bin/rg"
 echo -n "• Updating tlrc...        "
 eget tldr-pages/tlrc --asset=linux-gnu.tar.gz --file=tldr --to="~/bin/tldr"
+echo -n "• Updating shellcheck...  "
+eget koalaman/shellcheck
+
 
 echo
 echo "These ones use debs..."
