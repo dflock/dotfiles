@@ -84,4 +84,4 @@ eget zed-industries/zed --asset zed-linux-x86_64.tar.gz --file=*.* --all --to ~/
 echo "• Updating cascadia-code font..."
 eget microsoft/cascadia-code --file=ttf/*.ttf --all --to ~/.fonts
 echo "• Updating rclone..."
-sudo /home/duncan/bin/eget rclone/rclone --asset amd64.zip --to /usr/bin/rclone
+sudo ~/bin/eget rclone/rclone --asset amd64.zip --to /usr/bin/rclone
