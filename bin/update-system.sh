@@ -24,7 +24,7 @@ sudo apt update -qq
 apt list --upgradable
 
 echo "Installing apt updates..."
-sudo aptitude -q safe-upgrade
+sudo aptitude --full-resolver -q safe-upgrade
 
 echo "Updating flatpak apps..."
 sudo flatpak update -y
