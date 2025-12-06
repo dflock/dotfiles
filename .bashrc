@@ -54,6 +54,8 @@ source ~/bash/rust_env.bash
 source ~/bash/nim_env.bash
 source ~/bash/haskel_env.bash
 
+source ~/bash/mise_env.bash
+
 source ~/bash/sigil_env.bash
 
 # Took out because too slow at startup
