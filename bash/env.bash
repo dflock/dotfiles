@@ -75,6 +75,7 @@ export www="$HOME/www/"
 export dev="$HOME/dev/"
 export servers="$HOME/servers/"
 export projects="$HOME/Projects"
+export dotfiles="$HOME/Projects/dotfiles"
 
 export NOTES_DIR="$HOME/notes"
 export notes="$NOTES_DIR"
