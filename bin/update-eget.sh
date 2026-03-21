@@ -31,6 +31,7 @@ echo -n "• Updating rg...           "; eget BurntSushi/ripgrep --to="~/bin/rg"
 echo -n "• Updating sd...           "; eget chmln/sd --asset ^gnu
 echo -n "• Updating shellcheck...   "; eget koalaman/shellcheck
 echo -n "• Updating sigil...        "; eget Sigil-Ebook/Sigil --asset x86_64.AppImage --asset ^.zsync --to="~/Applications/"
+echo -n "• Updating sonar...        "; eget RasKrebs/sonar
 echo -n "• Updating starship...     "; eget starship/starship --asset ^musl
 echo -n "• Updating syncthingtray..."; eget Martchus/syncthingtray --asset=syncthingtray --asset=x86_64-pc-linux-gnu.tar.xz --asset=^.sig
 echo -n "• Updating tlrc...         "; eget tldr-pages/tlrc --asset=linux-gnu.tar.gz --file=tldr --to="~/bin/tldr"
