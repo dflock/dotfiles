@@ -17,7 +17,7 @@ echo -n "• Updating fd...           "; eget sharkdp/fd --asset x86_64-unknown-
 echo -n "• Updating fzf...          "; eget junegunn/fzf
 echo -n "• Updating hyperfine...    "; eget sharkdp/hyperfine --asset linux-musl.tar.gz
 echo -n "• Updating just...         "; eget casey/just
-echo -n "• Updating koreader...     "; eget koreader/koreader --asset appimage-x86_64
+echo -n "• Updating koreader...     "; eget koreader/koreader --asset x86_64.AppImage --to="~/Applications/"
 echo -n "• Updating lapce...        "; eget lapce/lapce --asset lapce-linux-amd64.tar.gz
 echo -n "• Updating lnav...         "; eget tstack/lnav
 echo -n "• Updating micro...        "; eget zyedidia/micro --asset static.tar.gz --asset ^tar.gz.sha
