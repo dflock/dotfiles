@@ -21,6 +21,5 @@ complete -o default -F _pip_completion pip
 
 source ~/.git-completion.bash
 
-# Completions for terraform, and the tf alias
-#complete -C /usr/bin/terraform terraform
-#complete -C /usr/bin/terraform tf
+# Completions for zed
+eval "$(zed --completions bash)"

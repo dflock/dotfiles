@@ -10,7 +10,7 @@ echo -n "• Updating bat...          "; eget sharkdp/bat --asset ^musl
 echo -n "• Updating btop...         "; eget aristocratos/btop
 echo -n "• Updating caddy...        "; eget caddyserver/caddy --asset amd64.tar.gz --asset ^.sig
 echo -n "• Updating delta...        "; eget dandavison/delta --asset musl.tar.gz
-echo -n "• Updating doggo...        "; eget mr-karan/doggo --asset Linux_x86_64.tar.gz
+echo -n "• Updating doggo...        "; eget mr-karan/doggo --asset linux_x86_64.tar.gz
 echo -n "• Updating duf...          "; eget muesli/duf --asset x86_64.tar.gz
 echo -n "• Updating eza...          "; eget eza-community/eza --asset musl.tar.gz
 echo -n "• Updating fd...           "; eget sharkdp/fd --asset x86_64-unknown-linux-musl.tar.gz
