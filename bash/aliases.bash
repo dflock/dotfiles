@@ -22,7 +22,7 @@ alias today='date +"%A, %B %-d, %Y"'
 # Use exa instead of ls
 alias ls='eza --classify'
 # Everything, in long format
-llopts='--long --header --group --git --all --all --group-directories-first --classify --color-scale --icons'
+llopts='--long --header --group --git --all --all --group-directories-first --classify --color-scale --icons auto'
 alias ll='eza $llopts'
 # Everything, in long format, newset 10 files only.
 alias llt='eza $llopts --sort newest | tail'
